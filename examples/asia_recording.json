@@ -1,0 +1,230 @@
+[
+ {
+  "model": "jev-1.13.0",
+  "state": {
+   "interpretation": "For each question, return a probability distribution for the child variable under exactly the stated parent assignment. Treat unspecified variables as unknown; do not assume them false.",
+   "task": "Parameterize a small educational Bayesian network about respiratory disease.",
+   "population": "Imagine a randomly selected adult patient in a general clinical population. Use ordinary real-world medical knowledge, not the memorized textbook Asia-network numbers."
+  },
+  "questions": {
+   "q0": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient recently visited Asia? Condition: No other facts are given.",
+    "criteria": {
+     "false": "It is false that the patient recently visited Asia.",
+     "true": "It is true that the patient recently visited Asia."
+    }
+   },
+   "q1": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient is a smoker? Condition: No other facts are given.",
+    "criteria": {
+     "false": "It is false that the patient is a smoker.",
+     "true": "It is true that the patient is a smoker."
+    }
+   },
+   "q2": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has tuberculosis? Condition: It is false that the patient recently visited Asia.",
+    "criteria": {
+     "false": "It is false that the patient has tuberculosis.",
+     "true": "It is true that the patient has tuberculosis."
+    }
+   },
+   "q3": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has tuberculosis? Condition: It is true that the patient recently visited Asia.",
+    "criteria": {
+     "false": "It is false that the patient has tuberculosis.",
+     "true": "It is true that the patient has tuberculosis."
+    }
+   },
+   "q4": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has lung cancer? Condition: It is false that the patient is a smoker.",
+    "criteria": {
+     "false": "It is false that the patient has lung cancer.",
+     "true": "It is true that the patient has lung cancer."
+    }
+   },
+   "q5": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has lung cancer? Condition: It is true that the patient is a smoker.",
+    "criteria": {
+     "false": "It is false that the patient has lung cancer.",
+     "true": "It is true that the patient has lung cancer."
+    }
+   },
+   "q6": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has bronchitis? Condition: It is false that the patient is a smoker.",
+    "criteria": {
+     "false": "It is false that the patient has bronchitis.",
+     "true": "It is true that the patient has bronchitis."
+    }
+   },
+   "q7": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has bronchitis? Condition: It is true that the patient is a smoker.",
+    "criteria": {
+     "false": "It is false that the patient has bronchitis.",
+     "true": "It is true that the patient has bronchitis."
+    }
+   },
+   "q8": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has tuberculosis or lung cancer? Condition: It is false that the patient has tuberculosis. It is false that the patient has lung cancer.",
+    "criteria": {
+     "false": "It is false that the patient has tuberculosis or lung cancer.",
+     "true": "It is true that the patient has tuberculosis or lung cancer."
+    }
+   },
+   "q9": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has tuberculosis or lung cancer? Condition: It is false that the patient has tuberculosis. It is true that the patient has lung cancer.",
+    "criteria": {
+     "false": "It is false that the patient has tuberculosis or lung cancer.",
+     "true": "It is true that the patient has tuberculosis or lung cancer."
+    }
+   },
+   "q10": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has tuberculosis or lung cancer? Condition: It is true that the patient has tuberculosis. It is false that the patient has lung cancer.",
+    "criteria": {
+     "false": "It is false that the patient has tuberculosis or lung cancer.",
+     "true": "It is true that the patient has tuberculosis or lung cancer."
+    }
+   },
+   "q11": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has tuberculosis or lung cancer? Condition: It is true that the patient has tuberculosis. It is true that the patient has lung cancer.",
+    "criteria": {
+     "false": "It is false that the patient has tuberculosis or lung cancer.",
+     "true": "It is true that the patient has tuberculosis or lung cancer."
+    }
+   },
+   "q12": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient's chest X-ray is abnormal? Condition: It is false that the patient has tuberculosis or lung cancer.",
+    "criteria": {
+     "false": "It is false that the patient's chest X-ray is abnormal.",
+     "true": "It is true that the patient's chest X-ray is abnormal."
+    }
+   },
+   "q13": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient's chest X-ray is abnormal? Condition: It is true that the patient has tuberculosis or lung cancer.",
+    "criteria": {
+     "false": "It is false that the patient's chest X-ray is abnormal.",
+     "true": "It is true that the patient's chest X-ray is abnormal."
+    }
+   },
+   "q14": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has shortness of breath (dyspnea)? Condition: It is false that the patient has tuberculosis or lung cancer. It is false that the patient has bronchitis.",
+    "criteria": {
+     "false": "It is false that the patient has shortness of breath (dyspnea).",
+     "true": "It is true that the patient has shortness of breath (dyspnea)."
+    }
+   },
+   "q15": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has shortness of breath (dyspnea)? Condition: It is false that the patient has tuberculosis or lung cancer. It is true that the patient has bronchitis.",
+    "criteria": {
+     "false": "It is false that the patient has shortness of breath (dyspnea).",
+     "true": "It is true that the patient has shortness of breath (dyspnea)."
+    }
+   },
+   "q16": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has shortness of breath (dyspnea)? Condition: It is true that the patient has tuberculosis or lung cancer. It is false that the patient has bronchitis.",
+    "criteria": {
+     "false": "It is false that the patient has shortness of breath (dyspnea).",
+     "true": "It is true that the patient has shortness of breath (dyspnea)."
+    }
+   },
+   "q17": {
+    "type": "choice",
+    "instructions": "Given the stated condition, which truth value best describes whether the patient has shortness of breath (dyspnea)? Condition: It is true that the patient has tuberculosis or lung cancer. It is true that the patient has bronchitis.",
+    "criteria": {
+     "false": "It is false that the patient has shortness of breath (dyspnea).",
+     "true": "It is true that the patient has shortness of breath (dyspnea)."
+    }
+   }
+  },
+  "probabilities": {
+   "q0": {
+    "false": 0.95,
+    "true": 0.05
+   },
+   "q1": {
+    "false": 0.71,
+    "true": 0.29
+   },
+   "q2": {
+    "false": 0.97,
+    "true": 0.03
+   },
+   "q3": {
+    "false": 0.69,
+    "true": 0.31
+   },
+   "q4": {
+    "false": 0.98,
+    "true": 0.02
+   },
+   "q5": {
+    "false": 0.87,
+    "true": 0.13
+   },
+   "q6": {
+    "false": 0.93,
+    "true": 0.07
+   },
+   "q7": {
+    "false": 0.27,
+    "true": 0.73
+   },
+   "q8": {
+    "false": 0.99,
+    "true": 0.01
+   },
+   "q9": {
+    "false": 0.0,
+    "true": 1.0
+   },
+   "q10": {
+    "false": 0.0,
+    "true": 1.0
+   },
+   "q11": {
+    "false": 0.0,
+    "true": 1.0
+   },
+   "q12": {
+    "false": 0.87,
+    "true": 0.13
+   },
+   "q13": {
+    "false": 0.02,
+    "true": 0.98
+   },
+   "q14": {
+    "false": 0.91,
+    "true": 0.09
+   },
+   "q15": {
+    "false": 0.15,
+    "true": 0.85
+   },
+   "q16": {
+    "false": 0.06,
+    "true": 0.94
+   },
+   "q17": {
+    "false": 0.03,
+    "true": 0.97
+   }
+  }
+ }
+]

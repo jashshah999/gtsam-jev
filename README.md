@@ -68,7 +68,7 @@ The elicited rows are within 0.09 of the ones in Frank Dellaert's recording.
 * **Wording matters.** Asking "is it true that the patient has lung cancer?" under a smoker condition
   returned 0.00. Asking which truth value best describes it, with the state asking for a probability
   distribution (`CPT_INTERPRETATION`), returned 0.13. In the hybrid example, a shorter task description
-  moved "Grease trap inspection scheduled for next week" from 0.14 to 0.58 slippery. An identical request
+  moved "Grease trap inspection scheduled for next week" from 0.10 to 0.58 slippery. An identical request
   repeated changed probabilities by at most 0.02.
 
 ## Tests

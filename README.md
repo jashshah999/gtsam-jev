@@ -37,8 +37,9 @@ for factor in factors:
 
 GTSAM's [SemanticModeEvidence](https://github.com/borglab/gtsam/pull/2832) example does this for a robot
 whose odometry steps are normal or slippery. Over 40 simulated routes of 40 steps, evidence from the notes
-took mode accuracy from 0.58 (geometry only) and 0.66 (a keyword list) to 0.94, and position RMSE from
-0.47 m and 0.45 m to 0.33 m. The notes there are synthetic.
+took mode accuracy from 0.82 (geometry only) and 0.77 (a keyword list) to 0.94. Position RMSE improved
+only a little, from 0.31 m (geometry) to 0.30 m, because on notes that say nothing Jev confidently answers
+"normal" and the slips there are lost. The notes are synthetic.
 
 ## Example: a Bayes net from descriptions
 
@@ -59,8 +60,9 @@ The elicited rows are within 0.09 of the ones in Frank Dellaert's recording.
 
 * **Floor the probabilities.** Jev often answers exactly 0 or 1, and a factor value of 0 makes a value
   impossible, so no measurement can ever overrule it. Every factor here is clipped to
-  `[floor, 1 - floor]` and renormalized. In the hybrid example, raising the floor from 0.05 to 0.2 to 0.3
-  let the geometry recover most of the slippery steps whose notes said nothing useful.
+  `[floor, 1 - floor]` and renormalized. A floor is not enough on its own: in the hybrid example even a
+  floor of 0.4 recovered few of the slips whose notes said nothing, partly because `DCSAM` is a local
+  method.
 * **Ask it to compare described options, not to estimate frequencies.** Rates, noise levels and
   transition probabilities come back near 0.5 whatever the truth is. Take those from data.
 * **Wording matters.** Asking "is it true that the patient has lung cancer?" under a smoker condition
